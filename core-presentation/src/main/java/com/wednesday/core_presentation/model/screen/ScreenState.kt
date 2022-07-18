@@ -1,4 +1,4 @@
-package com.wednesday.template.presentation.screen
+package com.wednesday.core_presentation.model.screen
 
 import android.os.Parcelable
 

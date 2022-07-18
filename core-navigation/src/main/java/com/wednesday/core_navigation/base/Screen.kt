@@ -1,4 +1,4 @@
-package com.wednesday.template.presentation.screen
+package com.wednesday.core_navigation.base
 
 import android.os.Parcelable
 import androidx.annotation.IdRes

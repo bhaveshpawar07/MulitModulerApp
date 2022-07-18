@@ -9,11 +9,11 @@ import androidx.annotation.CallSuper
 import androidx.viewbinding.ViewBinding
 import com.wednesday.core_navigation.base.Navigator
 import com.wednesday.core_presentation.base.component.StatefulComponent
-import com.wednesday.template.presentation.base.loading.LoadingComponent
-import com.wednesday.template.presentation.base.toolbar.ToolbarComponent
-import com.wednesday.template.presentation.base.viewmodel.BaseViewModel
-import com.wednesday.template.presentation.screen.MainScreenState
-import com.wednesday.template.presentation.screen.Screen
+import com.wednesday.core_presentation.base.loading.LoadingComponent
+import com.wednesday.core_presentation.base.toolbar.ToolbarComponent
+import com.wednesday.core_presentation.base.viewmodel.BaseViewModel
+import com.wednesday.core_presentation.model.screen.MainScreenState
+import com.wednesday.core_navigation.base.Screen
 
 abstract class MainFragment<
     BINDING : ViewBinding,

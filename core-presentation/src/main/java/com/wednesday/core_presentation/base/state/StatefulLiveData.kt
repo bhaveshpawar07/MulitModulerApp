@@ -1,4 +1,5 @@
-package com.wednesday.template.presentation.base.state
+package com.wednesday
+.template.presentation.base.state
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle

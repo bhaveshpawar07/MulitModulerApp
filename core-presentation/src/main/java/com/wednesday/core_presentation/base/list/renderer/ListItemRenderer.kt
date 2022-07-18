@@ -3,8 +3,8 @@ package com.wednesday.core_presentation.base.list.renderer
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
-import com.wednesday.template.presentation.base.UIListItemBase
-import com.wednesday.template.presentation.base.list.viewholder.BaseViewHolder
+import com.wednesday.core_presentation.model.base.UIListItemBase
+import com.wednesday.core_presentation.base.list.viewholder.BaseViewHolder
 
 typealias Inflater<T> = (inflater: LayoutInflater, viewGroup: ViewGroup, attachToParent: Boolean) -> T
 

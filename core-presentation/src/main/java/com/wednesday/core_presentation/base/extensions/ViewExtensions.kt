@@ -2,8 +2,7 @@ package com.wednesday.core_presentation.base.extensions
 
 import android.view.View
 import android.widget.TextView
-import com.wednesday.core_presentation.base.extensions.asString
-import com.wednesday.template.presentation.base.UIText
+import com.wednesday.core_presentation.model.base.UIText
 
 internal fun View.show() {
     visibility = View.VISIBLE

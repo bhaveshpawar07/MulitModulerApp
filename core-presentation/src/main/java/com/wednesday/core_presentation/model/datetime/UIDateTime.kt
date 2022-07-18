@@ -1,4 +1,4 @@
-package com.wednesday.template.presentation.datetime
+package com.wednesday.core_presentation.model.datetime
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

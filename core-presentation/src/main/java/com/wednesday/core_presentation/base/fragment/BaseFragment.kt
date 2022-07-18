@@ -11,9 +11,9 @@ import androidx.viewbinding.ViewBinding
 import com.wednesday.core_navigation.base.Navigator
 import com.wednesday.core_presentation.base.component.Component
 import com.wednesday.core_presentation.base.effect.Effect
-import com.wednesday.template.presentation.base.viewmodel.BaseViewModel
-import com.wednesday.template.presentation.screen.Screen
-import com.wednesday.template.presentation.screen.ScreenState
+import com.wednesday.core_presentation.base.viewmodel.BaseViewModel
+import com.wednesday.core_navigation.base.Screen
+import com.wednesday.core_presentation.model.screen.ScreenState
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 

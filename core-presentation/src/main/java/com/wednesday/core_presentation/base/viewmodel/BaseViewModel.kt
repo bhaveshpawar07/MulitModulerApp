@@ -1,17 +1,17 @@
-package com.wednesday.template.presentation.base.viewmodel
+package com.wednesday.core_presentation.base.viewmodel
 
 import android.os.Bundle
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import com.wednesday.template.navigation.Navigator
+import com.wednesday.core_navigation.base.Navigator
 import com.wednesday.core_presentation.base.effect.Effect
 import com.wednesday.core_presentation.base.intent.Intent
-import com.wednesday.template.presentation.base.state.StateOwner
-import com.wednesday.template.presentation.base.state.statefulLiveData
-import com.wednesday.template.presentation.screen.Screen
-import com.wednesday.template.presentation.screen.ScreenState
+import com.wednesday.core_presentation.base.state.StateOwner
+import com.wednesday.core_presentation.base.state.statefulLiveData
+import com.wednesday.core_navigation.base.Screen
+import com.wednesday.core_presentation.model.screen.ScreenState
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

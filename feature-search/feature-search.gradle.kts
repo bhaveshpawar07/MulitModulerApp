@@ -8,6 +8,11 @@ apply {
 }
 
 dependencies {
+    implementation(project(":core-presentation"))
+    implementation(project(":core-repository"))
+    implementation(project(":core-network"))
+    implementation(project(":core-common"))
+    implementation(project(":core-model"))
 
     implementation(Dependencies.Kotlin.stdLib)
 

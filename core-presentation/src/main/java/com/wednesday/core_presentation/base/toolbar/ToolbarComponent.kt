@@ -1,4 +1,4 @@
-package com.wednesday.template.presentation.base.toolbar
+package com.wednesday.core_presentation.base.toolbar
 
 import android.view.Menu
 import android.view.MenuItem
@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.MaterialToolbar
-import com.wednesday.template.presentation.R
-import com.wednesday.template.presentation.base.UIToolbar
+import com.wednesday.core_common.R
+import com.wednesday.core_presentation.model.base.UIToolbar
 import com.wednesday.core_presentation.base.component.StatefulComponent
 import com.wednesday.core_presentation.base.extensions.asString
 

@@ -4,11 +4,10 @@ import androidx.annotation.CallSuper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import com.wednesday.core_presentation.R
+import com.wednesday.core_common.R
 import com.wednesday.core_presentation.base.list.renderer.ListItemRenderer
-import com.wednesday.template.presentation.base.UIListItemBase
-import com.wednesday.template.presentation.base.list.ListAdapter
-import com.wednesday.template.presentation.base.list.viewholder.BaseViewHolder
+import com.wednesday.core_presentation.model.base.UIListItemBase
+import com.wednesday.core_presentation.base.list.ListAdapter
 import kotlin.reflect.KClass
 
 abstract class BaseNestedListViewHolder<T : UIListItemBase>(

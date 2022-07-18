@@ -1,7 +1,8 @@
-package com.wednesday.template.presentation.base
+package com.wednesday.core_presentation.model.base
 
 import android.os.Parcelable
 import androidx.annotation.DrawableRes
+import com.wednesday.core_presentation.model.base.UIText
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

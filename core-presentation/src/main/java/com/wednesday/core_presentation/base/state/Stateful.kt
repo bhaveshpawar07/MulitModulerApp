@@ -1,4 +1,4 @@
-package com.wednesday.template.presentation.base.state
+package com.wednesday.core_presentation.base.state
 
 import androidx.lifecycle.SavedStateHandle
 import kotlin.properties.ReadWriteProperty

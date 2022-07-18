@@ -29,6 +29,7 @@ dependencies {
     implementation(project(":core-common"))
 
     implementation(Dependencies.Kotlin.stdLib)
+    implementation(Dependencies.Kotlin.gradlePlugin)
 
     implementation(Dependencies.Koin.core)
     implementation(Dependencies.Koin.android)

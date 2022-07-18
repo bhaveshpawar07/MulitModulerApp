@@ -1,8 +1,6 @@
-package com.wednesday.template.presentation.base
+package com.wednesday.core_presentation.model.base
 
 import android.os.Parcelable
-import androidx.annotation.StringRes
-import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class UIText(

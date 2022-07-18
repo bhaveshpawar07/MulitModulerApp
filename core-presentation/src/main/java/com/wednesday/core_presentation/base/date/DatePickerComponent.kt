@@ -5,7 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.wednesday.core_presentation.base.component.Component
 import com.wednesday.core_presentation.base.effect.ShowDatePickerEffect
-import com.wednesday.template.presentation.datetime.UIDate
+import com.wednesday.core_presentation.model.datetime.UIDate
 
 class DatePickerComponent(
     private val fragment: Fragment

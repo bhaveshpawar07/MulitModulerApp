@@ -1,6 +1,7 @@
-package com.wednesday.template.presentation.base
+package com.wednesday.core_presentation.model.base
 
 import androidx.annotation.StringRes
+import com.wednesday.core_presentation.model.base.UIText
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

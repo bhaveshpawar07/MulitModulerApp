@@ -1,4 +1,4 @@
-package com.wednesday.template.presentation.base.list
+package com.wednesday.core_presentation.base.list
 
 import android.view.View
 import androidx.lifecycle.ViewModel
@@ -6,9 +6,9 @@ import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.wednesday.template.presentation.R
-import com.wednesday.template.presentation.base.UIList
-import com.wednesday.template.presentation.base.UIListItemBase
+import com.wednesday.core_common.R
+import com.wednesday.core_presentation.model.base.UIList
+import com.wednesday.core_presentation.model.base.UIListItemBase
 import com.wednesday.core_presentation.base.component.StatefulComponent
 import com.wednesday.core_presentation.base.intent.Intent
 import com.wednesday.core_presentation.base.intent.IntentHandler

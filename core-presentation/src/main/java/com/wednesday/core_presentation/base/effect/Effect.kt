@@ -1,8 +1,8 @@
 package com.wednesday.core_presentation.base.effect
 
 import android.view.View
-import com.wednesday.template.presentation.base.UIText
-import com.wednesday.template.presentation.datetime.UIDate
+import com.wednesday.core_presentation.model.base.UIText
+import com.wednesday.core_presentation.model.datetime.UIDate
 
 interface Effect
 

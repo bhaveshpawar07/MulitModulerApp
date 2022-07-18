@@ -1,7 +1,7 @@
-package com.wednesday.template.presentation.base.loading
+package com.wednesday.core_presentation.base.loading
 
 import android.view.View
-import com.wednesday.template.presentation.R
+import com.wednesday.core_common.R
 import com.wednesday.core_presentation.base.component.StatefulComponent
 import com.wednesday.core_presentation.base.extensions.setVisible
 

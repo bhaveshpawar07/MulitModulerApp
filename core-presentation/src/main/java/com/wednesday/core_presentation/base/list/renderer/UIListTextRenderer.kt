@@ -2,9 +2,9 @@ package com.wednesday.core_presentation.base.list.renderer
 
 import android.view.ViewGroup
 import com.wednesday.core_common.databinding.ItemListTextBinding
-import com.wednesday.template.presentation.base.list.UIListText
-import com.wednesday.template.presentation.base.list.viewholder.BaseViewHolder
-import com.wednesday.template.presentation.base.list.viewholder.UIListTextViewHolder
+import com.wednesday.core_presentation.base.list.UIListText
+import com.wednesday.core_presentation.base.list.viewholder.BaseViewHolder
+import com.wednesday.core_presentation.base.list.viewholder.UIListTextViewHolder
 
 class UIListTextRenderer : ListItemRenderer<UIListText>() {
 

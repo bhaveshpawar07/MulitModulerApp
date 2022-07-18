@@ -8,6 +8,7 @@ plugins {
 
 android {
     compileSdk = 32
+    buildToolsVersion = "30.0.3"
 
     defaultConfig {
         applicationId = "com.wednesday.mulitmodulerapp"
@@ -19,18 +20,63 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles (getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+//    buildTypes {
+//        release {
+//            isMinifyEnabled = false
+//            proguardFiles (getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+//        }
+//    }
+//    compileOptions {
+//        sourceCompatibility = JavaVersion.VERSION_1_8
+//        targetCompatibility = JavaVersion.VERSION_1_8
+//    }
+//    kotlinOptions {
+//        jvmTarget = "1.8"
+//    }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("qa") {
+            dimension = "version"
+            applicationIdSuffix = ".qa"
+            versionNameSuffix = "-qa"
+        }
+        create("prod") {
+            dimension = "version"
+            applicationIdSuffix = ".prod"
+            versionNameSuffix = "-prod"
+        }
+        create("dev") {
+            dimension = "version"
+            applicationIdSuffix = ".dev"
+            versionNameSuffix = "-dev"
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
+
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "${project.rootDir}/tools/proguard-rules.pro"
+            )
+        }
+        applicationVariants.all {
+            val variant = this
+            variant.outputs
+                .map { it as com.android.build.gradle.internal.api.BaseVariantOutputImpl }
+                .forEach { output ->
+                    val flavour = variant.flavorName
+                    val builtType = variant.buildType.name
+                    val versionName = variant.versionName
+                    val vCode = variant.versionCode
+                    output.outputFileName =
+                        "app-${flavour}-${builtType}-${versionName}(${vCode}).apk".replace(
+                            "-${flavour}",
+                            ""
+                        )
+                }
+        }
     }
 }
 

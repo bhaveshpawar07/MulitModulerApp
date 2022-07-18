@@ -1,6 +1,6 @@
-package com.wednesday.template.presentation.screen
+package com.wednesday.core_presentation.model.screen
 
-import com.wednesday.template.presentation.base.UIToolbar
+import com.wednesday.core_presentation.model.base.UIToolbar
 
 interface MainScreenState : ScreenState {
     val toolbar: UIToolbar

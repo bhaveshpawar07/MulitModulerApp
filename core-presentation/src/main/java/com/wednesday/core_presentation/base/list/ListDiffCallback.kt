@@ -1,7 +1,7 @@
-package com.wednesday.template.presentation.base.list
+package com.wednesday.core_presentation.base.list
 
 import androidx.recyclerview.widget.DiffUtil
-import com.wednesday.template.presentation.base.UIListItemBase
+import com.wednesday.core_presentation.model.base.UIListItemBase
 
 class ListDiffCallback(
     private val oldList: List<UIListItemBase>,

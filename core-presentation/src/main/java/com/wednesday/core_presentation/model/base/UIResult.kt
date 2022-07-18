@@ -1,4 +1,4 @@
-package com.wednesday.template.presentation.base
+package com.wednesday.core_presentation.model.base
 
 sealed class UIResult<out T> {
 

@@ -1,11 +1,11 @@
 package com.wednesday.core_presentation.base.extensions
 
 import android.content.Context
-import com.wednesday.template.presentation.base.Raw
-import com.wednesday.template.presentation.base.RawFormatted
-import com.wednesday.template.presentation.base.Resource
-import com.wednesday.template.presentation.base.ResourceFormatted
-import com.wednesday.template.presentation.base.UIText
+import com.wednesday.core_presentation.model.base.Raw
+import com.wednesday.core_presentation.model.base.RawFormatted
+import com.wednesday.core_presentation.model.base.Resource
+import com.wednesday.core_presentation.model.base.ResourceFormatted
+import com.wednesday.core_presentation.model.base.UIText
 import org.koin.core.component.KoinComponent
 
 internal object KoinComponentWrapper : KoinComponent

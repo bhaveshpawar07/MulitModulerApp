@@ -1,5 +1,7 @@
 package com.wednesday.feature_search.interactor
 
+import com.wednesday.core_presentation.model.base.UIList
+import com.wednesday.core_presentation.model.base.UIResult
 import kotlinx.coroutines.flow.Flow
 
 interface SearchCityInteractor {
