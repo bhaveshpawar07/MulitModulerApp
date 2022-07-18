@@ -1,8 +1,8 @@
-package com.wednesday.core_common.mappers.weather
+package com.wednesday.core_repository.mappers.weather
 
 import com.wednesday.core_common.mappers.base.Mapper
 import com.wednesday.core_database.model.geoCoding.LocalLocation
-import com.wednesday.core_domain.model.weather.City
+import com.wednesday.core_model.weather.City
 import timber.log.Timber
 
 interface LocalCityMapper : Mapper<City, LocalLocation>

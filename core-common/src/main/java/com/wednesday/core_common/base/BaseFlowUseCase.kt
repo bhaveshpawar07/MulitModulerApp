@@ -7,7 +7,7 @@ import timber.log.Timber
 
 interface BaseFlowUseCase<IN, OUT> {
 
-    operator fun invoke(param: IN): Flow<Res<OUT>> {
+    operator fun invoke(param: IN): Flow<Result<OUT>> {
         return invokeInternal(param)
             .map<OUT, Result<OUT>> {
                 return@map Result.Success(it)

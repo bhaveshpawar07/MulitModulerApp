@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
 }
 
 apply {
@@ -11,11 +12,6 @@ android {
     buildFeatures {
         viewBinding = true
         compose = true
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
     }
 
     composeOptions {
@@ -38,15 +34,7 @@ dependencies {
 
     implementation(Dependencies.Material.material)
 
-    implementation(Dependencies.Compose.activity)
-    implementation(Dependencies.Compose.material)
-    implementation(Dependencies.Compose.animation)
-    implementation(Dependencies.Compose.uiTooling)
-    implementation(Dependencies.Compose.viewModel)
-    implementation(Dependencies.Compose.materialIconCore)
-    implementation(Dependencies.Compose.materialIconExtended)
-    implementation(Dependencies.Compose.foundation)
-    implementation(Dependencies.Compose.liveData)
+
 
     implementation(Dependencies.Image.coil)
 

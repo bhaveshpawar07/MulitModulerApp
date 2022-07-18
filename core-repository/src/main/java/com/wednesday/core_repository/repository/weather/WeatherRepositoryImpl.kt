@@ -1,9 +1,9 @@
 package com.wednesday.core_repository.repository.weather
 
-import com.wednesday.core_common.mappers.weather.DomainCityMapper
+import com.wednesday.core_repository.mappers.weather.DomainCityMapper
 import com.wednesday.core_repository.mappers.weather.DomainWeatherMapper
-import com.wednesday.core_common.mappers.weather.LocalCityMapper
-import com.wednesday.core_common.mappers.weather.LocalWeatherMapper
+import com.wednesday.core_repository.mappers.weather.LocalCityMapper
+import com.wednesday.core_repository.mappers.weather.LocalWeatherMapper
 import com.wednesday.core_database.OpenWeatherLocalService
 import com.wednesday.core_network.OpenWeatherRemoteService
 import com.wednesday.core_repository.repository.date.DateRepo

@@ -1,11 +1,11 @@
 package com.wednesday.core_repository.di
 
-import com.wednesday.core_common.mappers.weather.DomainCityMapper
-import com.wednesday.core_common.mappers.weather.DomainCityMapperImpl
-import com.wednesday.core_common.mappers.weather.LocalCityMapper
-import com.wednesday.core_common.mappers.weather.LocalCityMapperImpl
-import com.wednesday.core_common.mappers.weather.LocalWeatherMapper
-import com.wednesday.core_common.mappers.weather.LocalWeatherMapperImpl
+import com.wednesday.core_repository.mappers.weather.DomainCityMapper
+import com.wednesday.core_repository.mappers.weather.DomainCityMapperImpl
+import com.wednesday.core_repository.mappers.weather.LocalCityMapper
+import com.wednesday.core_repository.mappers.weather.LocalCityMapperImpl
+import com.wednesday.core_repository.mappers.weather.LocalWeatherMapper
+import com.wednesday.core_repository.mappers.weather.LocalWeatherMapperImpl
 import com.wednesday.core_repository.mappers.weather.DomainWeatherMapper
 import com.wednesday.core_repository.mappers.weather.DomainWeatherMapperImpl
 import com.wednesday.core_repository.repository.date.DateRepoImpl

@@ -2,8 +2,6 @@ package com.wednesday.feature_search.interactor
 
 import com.wednesday.core_model.weather.City
 import com.wednesday.core_presentation.model.base.UIList
-import com.wednesday.core_presentation.model.base.UIResult
-import com.wednesday.feature_search.interactor.base.CoroutineContextController
 import com.wednesday.feature_search.mappers.UICitySearchResultsMapper
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
@@ -14,6 +12,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.receiveAsFlow
 import timber.log.Timber
 import com.wednesday.core_common.base.Result
+import com.wednesday.core_presentation.base.coroutine.CoroutineContextController
 import com.wednesday.feature_search.interactor.usecase.GetFavouriteCitiesFlowUseCase
 import com.wednesday.feature_search.interactor.usecase.SearchCitiesUseCase
 
@@ -26,15 +25,14 @@ class SearchCityInteractorImpl(
 
     private val searchResultStateFlow = Channel<List<City>>()
 
-    override val searchResultsFlow: Flow<UIResult<UIList>> = favouriteCitiesFlowUseCase(Unit)
+    override val searchResultsFlow: Flow<Result<UIList>> = favouriteCitiesFlowUseCase(Unit)
         .combine(searchResultStateFlow.receiveAsFlow()) { favouriteCities, searchResults ->
             when {
-
                 searchResults.isEmpty() -> {
-                    UIResult.Success(UIList())
+                    Result.Success(UIList())
                 }
                 favouriteCities is Result.Success -> {
-                    UIResult.Success(
+                    Result.Success(
                         citySearchResultMapper.map(
                             favouriteCities.data,
                             searchResults
@@ -43,7 +41,7 @@ class SearchCityInteractorImpl(
                 }
                 favouriteCities is Result.Error -> {
                     Timber.e(favouriteCities.exception)
-                    UIResult.Error(favouriteCities.exception)
+                    Result.Error(favouriteCities.exception)
                 }
                 else -> {
                     error("Something went wrong")
@@ -53,9 +51,9 @@ class SearchCityInteractorImpl(
         .onEach {
             Timber.tag(TAG).d("searchResultsFlow: emit = $it")
         }
-        .flowOn(coroutineContextController.dispatcherDefault)
+        .flowOn(coroutineContextController.default)
         .catch { e ->
-            emit(UIResult.Error(e as Exception))
+            emit(Result.Error(e as Exception))
         }
 
     override suspend fun search(term: String): Unit = coroutineContextController.switchToDefault {

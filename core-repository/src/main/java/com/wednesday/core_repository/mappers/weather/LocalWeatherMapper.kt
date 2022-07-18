@@ -1,15 +1,15 @@
-package com.wednesday.core_common.mappers.weather
+package com.wednesday.core_repository.mappers.weather
 
 import com.wednesday.core_common.mappers.base.Mapper3
+import com.wednesday.core_database.model.currentWeather.LocalCurrentWeather
+import com.wednesday.core_database.model.currentWeather.LocalCurrentWeatherClouds
+import com.wednesday.core_database.model.currentWeather.LocalCurrentWeatherCoord
+import com.wednesday.core_database.model.currentWeather.LocalCurrentWeatherMain
+import com.wednesday.core_database.model.currentWeather.LocalCurrentWeatherSys
+import com.wednesday.core_database.model.currentWeather.LocalCurrentWeatherWeather
+import com.wednesday.core_database.model.currentWeather.LocalCurrentWeatherWind
 import com.wednesday.core_network.models.currentWeather.RemoteCurrentWeather
 import com.wednesday.core_repository.repository.date.DateRepo
-import com.wednesday.template.service.openWeather.currentWeather.local.LocalCurrentWeather
-import com.wednesday.template.service.openWeather.currentWeather.local.LocalCurrentWeatherClouds
-import com.wednesday.template.service.openWeather.currentWeather.local.LocalCurrentWeatherCoord
-import com.wednesday.template.service.openWeather.currentWeather.local.LocalCurrentWeatherMain
-import com.wednesday.template.service.openWeather.currentWeather.local.LocalCurrentWeatherSys
-import com.wednesday.template.service.openWeather.currentWeather.local.LocalCurrentWeatherWeather
-import com.wednesday.template.service.openWeather.currentWeather.local.LocalCurrentWeatherWind
 import timber.log.Timber
 
 interface LocalWeatherMapper : Mapper3<RemoteCurrentWeather, Double, Double, LocalCurrentWeather>

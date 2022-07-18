@@ -1,21 +1,21 @@
 object Dependencies {
 
-    object Compose {
-        const val activity = "androidx.activity:activity-compose:${Versions.activityCompose}"
-        const val material = "androidx.compose.material:material:${Versions.compose}"
-        const val materialIconCore =
-            "androidx.compose.material:material-icons-core:${Versions.compose}"
-        const val materialIconExtended =
-            "androidx.compose.material:material-icons-extended:${Versions.compose}"
-        const val foundation = "androidx.compose.foundation:foundation:${Versions.compose}"
-        const val runtime = "androidx.compose.runtime:runtime:${Versions.compose}"
-        const val liveData = "androidx.compose.runtime:runtime-livedata:${Versions.compose}"
-        const val animation = "androidx.compose.animation:animation:${Versions.compose}"
-        const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
-        const val viewModel =
-            "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.lifecycleViewModelCompose}"
-        const val uiTest = "androidx.compose.ui:ui-test-junit4:${Versions.compose}"
-    }
+//    object Compose {
+//        const val activity = "androidx.activity:activity-compose:${Versions.activityCompose}"
+//        const val material = "androidx.compose.material:material:${Versions.compose}"
+//        const val materialIconCore =
+//            "androidx.compose.material:material-icons-core:${Versions.compose}"
+//        const val materialIconExtended =
+//            "androidx.compose.material:material-icons-extended:${Versions.compose}"
+//        const val foundation = "androidx.compose.foundation:foundation:${Versions.compose}"
+//        const val runtime = "androidx.compose.runtime:runtime:${Versions.compose}"
+//        const val liveData = "androidx.compose.runtime:runtime-livedata:${Versions.compose}"
+//        const val animation = "androidx.compose.animation:animation:${Versions.compose}"
+//        const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
+//        const val viewModel =
+//            "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.lifecycleViewModelCompose}"
+//        const val uiTest = "androidx.compose.ui:ui-test-junit4:${Versions.compose}"
+//    }
 
     object Room {
         const val runtime = "androidx.room:room-runtime:${Versions.room}"
