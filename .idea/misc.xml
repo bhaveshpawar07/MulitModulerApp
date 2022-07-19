@@ -5,7 +5,9 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23802083333333332" />
         <entry key="core-common/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="core-common/src/main/res/layout/city_item_list.xml" value="0.2520833333333333" />
         <entry key="core-common/src/main/res/layout/component_loading.xml" value="0.2520833333333333" />
+        <entry key="core-common/src/main/res/layout/fragment_search.xml" value="0.11197916666666667" />
         <entry key="core-common/src/main/res/layout/fragment_weather.xml" value="0.2520833333333333" />
         <entry key="core-common/src/main/res/layout/item_weather.xml" value="0.2520833333333333" />
       </map>

@@ -2,7 +2,6 @@ plugins {
     id ("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
-    kotlin("android")
 }
 
 
@@ -82,6 +81,15 @@ android {
 
 dependencies {
 
+    implementation(project(":core-database"))
+    implementation(project(":core-network"))
+    implementation(project(":core-presentation"))
+    implementation(project(":core-repository"))
+    implementation(project(":core-common"))
+    implementation(project(":core-navigation"))
+    implementation(project(":feature-search"))
+    implementation(project(":feature-weather"))
+
     implementation(Dependencies.Kotlin.stdLib)
 
     implementation(Dependencies.Koin.core)
@@ -92,5 +100,7 @@ dependencies {
     implementation(Dependencies.Logging.timber)
 
     implementation(Dependencies.Android.splashScreen)
+    implementation(Dependencies.Android.navigationFragment)
+    implementation(Dependencies.Android.navigationUi)
 
 }

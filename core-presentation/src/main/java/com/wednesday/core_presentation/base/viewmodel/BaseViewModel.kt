@@ -40,7 +40,8 @@ abstract class BaseViewModel<SCREEN : Screen, STATE : ScreenState, NAV : Navigat
 
     private var recreateFlag: Unit? = null
 
-    internal abstract fun onCreate(fromRecreate: Boolean)
+    protected abstract fun onCreate(fromRecreate: Boolean)
+//    internal abstract fun onCreate(fromRecreate: Boolean)
 
     open fun onResume() = Unit
 

@@ -22,12 +22,12 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.reflect.KClass
 
-internal open class BaseListComponent<T, I : Intent>(
+open class BaseListComponent<T, I : Intent>(
     protected val listViewModel: T,
     private val recyclerViewId: Int = R.id.recyclerView,
 ) : StatefulComponent<UIList>() where T : ViewModel, T : IntentHandler<I> {
 
-    protected val renderers = mutableListOf<Pair<KClass<*>, ListItemRenderer<UIListItemBase>>>()
+     val renderers = mutableListOf<Pair<KClass<*>, ListItemRenderer<UIListItemBase>>>()
 
     private val intentChannel = Channel<I>(Channel.CONFLATED)
 

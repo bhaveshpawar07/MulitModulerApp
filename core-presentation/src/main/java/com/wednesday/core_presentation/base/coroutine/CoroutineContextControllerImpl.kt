@@ -5,7 +5,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-internal data class CoroutineContextControllerImpl(
+data class CoroutineContextControllerImpl(
     val main: CoroutineDispatcher = Dispatchers.Main,
     override val default: CoroutineDispatcher = Dispatchers.Default,
     override val io: CoroutineDispatcher = Dispatchers.IO

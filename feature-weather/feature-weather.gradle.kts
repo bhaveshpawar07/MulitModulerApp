@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
+    id("kotlin-parcelize")
 }
 
 apply {
@@ -13,10 +14,27 @@ dependencies {
     implementation(project(":core-network"))
     implementation(project(":core-common"))
     implementation(project(":core-model"))
+    implementation(project(":core-navigation"))
 
     implementation(Dependencies.Logging.timber)
 
     implementation(Dependencies.Coroutines.core)
+
+    implementation(Dependencies.Android.coreKtx)
+    implementation(Dependencies.Android.recyclerView)
+    implementation(Dependencies.Material.material)
+
+    implementation(Dependencies.Android.lifecycleViewModel)
+    implementation(Dependencies.Android.lifecycleViewModelKtx)
+
+    implementation(Dependencies.Koin.core)
+    implementation(Dependencies.Koin.android)
+    implementation(Dependencies.Koin.navigation)
+    implementation(Dependencies.Koin.compose)
+
+    implementation(Dependencies.Kotlin.stdLib)
+
+    implementation(Dependencies.Image.coil)
 
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.4.2")

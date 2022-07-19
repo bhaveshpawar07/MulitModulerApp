@@ -1,11 +1,14 @@
 package com.wednesday.feature_search.presentation.list
 
 import androidx.core.content.ContextCompat
-import com.wednesday.core_presentation.base.list.viewholder.BaseViewHolder
 import kotlinx.coroutines.channels.Channel
 import com.wednesday.core_common.databinding.CityItemListBinding
-import com.wednesday.core_presentation.base.intent.Intent
+import com.wednesday.core_presentation.base.list.viewholder.BaseViewHolder
 import com.wednesday.core_presentation.model.weather.UICity
+import com.wednesday.core_common.R
+import com.wednesday.core_presentation.base.intent.Intent
+import com.wednesday.feature_search.presentation.SearchScreenIntent
+
 
 class UICityListViewHolder(private val binding: CityItemListBinding) :
     BaseViewHolder<UICity>(binding) {

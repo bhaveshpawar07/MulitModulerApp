@@ -7,7 +7,7 @@ import com.wednesday.core_presentation.base.intent.Intent
 import com.wednesday.core_presentation.base.intent.IntentHandler
 import com.wednesday.core_presentation.base.list.renderer.ListItemRenderer
 
-internal class ListComponent<T, I : Intent>(
+ class ListComponent<T, I : Intent>(
     listViewModel: T,
     recyclerViewId: Int = R.id.recyclerView,
     callback: ListComponent<T, I>.() -> Unit,
@@ -21,7 +21,7 @@ internal class ListComponent<T, I : Intent>(
     }
 
     @Suppress("UNCHECKED_CAST")
-    internal inline fun <reified T : UIListItemBase> addRenderer(renderer: ListItemRenderer<T>) {
+    inline fun <reified T : UIListItemBase> addRenderer(renderer: ListItemRenderer<T>) {
         renderers.add(T::class to (renderer as ListItemRenderer<UIListItemBase>))
     }
 }

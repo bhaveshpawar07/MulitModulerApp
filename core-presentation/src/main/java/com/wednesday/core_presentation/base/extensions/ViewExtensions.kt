@@ -20,6 +20,6 @@ internal fun View.setVisible(visible: Boolean) {
     visibility = if (visible) View.VISIBLE else View.GONE
 }
 
-internal fun TextView.setUIText(uiText: UIText) {
+fun TextView.setUIText(uiText: UIText) {
     text = uiText.asString()
 }

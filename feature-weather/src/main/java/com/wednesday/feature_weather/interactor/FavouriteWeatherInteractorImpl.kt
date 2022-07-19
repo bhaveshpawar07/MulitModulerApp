@@ -1,6 +1,7 @@
 package com.wednesday.feature_weather.interactor
 
 import com.wednesday.core_common.base.Result
+import com.wednesday.core_common.base.mapToResult
 import com.wednesday.core_presentation.base.coroutine.CoroutineContextController
 import com.wednesday.core_presentation.model.base.UIList
 import com.wednesday.core_presentation.model.weather.UICity
@@ -14,7 +15,6 @@ import com.wednesday.feature_weather.mappers.UIWeatherListMapper
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import timber.log.Timber
 
@@ -47,25 +47,20 @@ class FavouriteWeatherInteractorImpl(
         Timber.tag(TAG).d("getFavouriteCitiesFlow")
         return getFavouriteCitiesWeatherFlowUseCase(Unit)
             .distinctUntilChanged()
-            .map {
-//                when(it){
-//                    is Result.Error -> TODO()
-//                    is Result.Success -> Result.Success(weatherListMapper.map(it.data))
-//                }
-                Result.Success(weatherListMapper.map(it.get()))
+            .mapToResult{
+                weatherListMapper.map(it)
             }
             .flowOn(coroutineContextController.default)
             .onEach {
-//                Result.Success(it)
-                Timber.tag(TAG).d("getFavouriteCitiesFlow: emit = $it")
+              Timber.tag(TAG).d("getFavouriteCitiesFlow: emit = $it")
             }
     }
 
     override fun getFavouriteCitiesFlow(): Flow<Result<List<UICity>>> {
         Timber.tag(TAG).d("getFavouriteCitiesFlow() called")
         return getFavouriteCitiesFlowUseCase(Unit)
-            .mapToUIResult(success = {
-                this.data.map(uiCityMapper::mapFavouriteCity)
+            .mapToResult(success = {
+                it.map(uiCityMapper::mapFavouriteCity)
             })
             .flowOn(coroutineContextController.default)
             .onEach { Timber.tag(TAG).d("getFavouriteCitiesFlow: emit = $it") }
@@ -74,7 +69,7 @@ class FavouriteWeatherInteractorImpl(
     override suspend fun fetchFavouriteCitiesWeather(): Result<Unit> =
         coroutineContextController.switchToDefault {
             Timber.tag(TAG).d("fetchFavouriteCities() called")
-            fetchFavouriteCitiesWeatherUseCase(Unit).let(::mapResult)
+            fetchFavouriteCitiesWeatherUseCase(Unit)
         }
 
     companion object {
